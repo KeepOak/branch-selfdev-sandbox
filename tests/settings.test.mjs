@@ -25,3 +25,9 @@ test("knob0929t205616 defaults to medium and keeps a valid saved value", () => {
   assert.equal(readSetting({ knob0929t205616: "long" }, "knob0929t205616"), "long");
   assert.equal(readSetting({ knob0929t205616: "huge" }, "knob0929t205616"), "medium");
 });
+
+test("k0929t222556 defaults to medium and keeps a valid saved value", () => {
+  assert.equal(readSetting({}, "k0929t222556"), "medium");
+  assert.equal(readSetting({ k0929t222556: "long" }, "k0929t222556"), "long");
+  assert.equal(readSetting({ k0929t222556: "huge" }, "k0929t222556"), "medium");
+});
