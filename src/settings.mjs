@@ -1,5 +1,6 @@
 /** The app's settings knobs: each has a default and says which values it accepts. */
 export const knobs = {
+  knob0929t204327: { default: "medium", valid: (value) => ["short", "medium", "long"].includes(value) },
   knob0929t203751: { default: "medium", valid: (value) => ["short", "medium", "long"].includes(value) },
   theme: { default: "light", valid: (value) => ["light", "dark"].includes(value) },
 };
