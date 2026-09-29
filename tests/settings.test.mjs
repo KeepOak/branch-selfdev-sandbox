@@ -7,3 +7,9 @@ test("theme defaults to light and keeps a valid saved value", () => {
   assert.equal(readSetting({ theme: "dark" }, "theme"), "dark");
   assert.equal(readSetting({ theme: "purple" }, "theme"), "light");
 });
+
+test("knob0929t203628 defaults to medium and keeps a valid saved value", () => {
+  assert.equal(readSetting({}, "knob0929t203628"), "medium");
+  assert.equal(readSetting({ knob0929t203628: "long" }, "knob0929t203628"), "long");
+  assert.equal(readSetting({ knob0929t203628: "huge" }, "knob0929t203628"), "medium");
+});
