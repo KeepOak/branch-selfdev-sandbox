@@ -9,3 +9,4 @@ export function readSetting(saved, name) {
   if (!knob) throw new Error(`No setting called ${name}`);
   return Object.hasOwn(saved, name) && knob.valid(saved[name]) ? saved[name] : knob.default;
 }
+// probe
